@@ -199,18 +199,9 @@ a:hover {
 }
 
 input[type=submit] {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+  
+}
+ 
 }
 
 .new-message {
