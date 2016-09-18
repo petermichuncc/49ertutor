@@ -10,10 +10,16 @@
     "passport-local": "latest",
     "ejs": "~0.8.4",
     "socket.io": "~0.9.16",
-    "passport.socketio": "~2.2.1"
+    "passport.socketio": "~2.2.1",
+    "grunt": "~0.4.2",
+      "grunt-contrib-requirejs": "~0.4.1",
+  "grunt-config": "~0.1.4",
+  "grunt-string-replace": "~0.2.7",
+  "grunt-contrib-clean": "~0.5.0",
+  "grunt-contrib-cssmin": "~0.10.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~0.7.0",
     "grunt-concurrent": "~0.4.1",
@@ -27,7 +33,7 @@
     "jpegtran-bin": "0.2.0",
     "grunt-contrib-imagemin": "~0.3.0",
     "grunt-contrib-jshint": "~0.7.1",
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-uglify": "0.5.1",
     "grunt-contrib-watch": "~0.5.2",
     "grunt-google-cdn": "~0.2.0",
     "grunt-newer": "~0.5.4",
