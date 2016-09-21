@@ -26,6 +26,11 @@ angular.module('chatApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+       .when('/profile', {
+        templateUrl: 'partials/profile',
+        controller: 'ProfileCtrl'
+       
+      })
       .otherwise({
         redirectTo: '/'
       });
