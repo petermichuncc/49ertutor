@@ -2,18 +2,15 @@
   <div ng-include="'partials/navbar'" class="center"></div>
   <div class="main">
     <div class="chat">
-      <section auto-scroll="event:scroll">
-        <ul>
-          <li ng-repeat="message in getMessages()">
-           <!-- <img class="author-profile" ng-src="{{ message.author.profileImg }}">-->
-            <div class="message">
-              <div class="author" ng-class="{'me':currentUser.name == message.author.name}">{{ message.author.name }}</div>
-              <div class="date">{{ message.date | date: 'h:mm' }}</div>
-              <div class="body">{{ message.body }}</div>
-            </div>
-          </li>
-        </ul>
-      </section>
+     <div style="position: fixed; top: 0px; left: 0px; width: 300px; height: 300px;">
+     <!-- Add a menu and put profile image as icon 
+https://getmdl.io/components/index.html#menus-section
+
+       -->
+     <!-- Add a default image to start with -->
+<!-- https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg  -->
+<img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg {{image}}">
+</div>
       <footer>
         <form class="message-form" ng-submit="sendMessage()">
           <input class="new-message" placeholder="Type your message here..." ng-model="newMessage" ng-trim="false" autofocus>

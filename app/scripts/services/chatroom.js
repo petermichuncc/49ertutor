@@ -58,7 +58,7 @@ angular.module('chatApp')
       sendMessage: function(message) {
         mySocket.emit( 'message', { body: message } );
         // push message locally
-        messages.push( { body: message, author: $rootScope.currentUser, date: Date.now() });
+        messages.push( { body: message, author: $rootScope.currentUser, date: Date.now(),test:Date.now() });
         scrollToBottom();
       }
     };
