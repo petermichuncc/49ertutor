@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('chatApp')
   .controller('MainCtrl', function ($scope, chatroom) {
     $scope.getMessages = chatroom.getMessages;
@@ -9,6 +10,7 @@ angular.module('chatApp')
       if(!$scope.newMessage) {
         return;
       }
+
       chatroom.sendMessage($scope.newMessage);
       $scope.newMessage = '';
     };

@@ -1,4 +1,6 @@
 'use strict';
+var moment = require('moment');
+
 
 var express = require('express'),
     path = require('path'),
@@ -44,6 +46,7 @@ require('./lib/routes')(app);
 // Start server
 server.listen(config.port, function () {
   console.log('Express server listening on port %d in %s mode', config.port, app.get('env'));
+  console.log("the current time is " + moment().format("YYYY-MM-DD hh:mm:ss.SSS"));
 });
 
 // Expose app
