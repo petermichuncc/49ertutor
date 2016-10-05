@@ -16,7 +16,23 @@
       <h1><a href="/">Saitama</a></h1>
       <h2>B-Class SuperHero</h2>
       <ul id="menu">
-        <li><span>Some information about me</span></li>
+        <li><span>Rating</span></li>
+       
+  <div ng-controller="StarCtrl"> 
+    <div class=col-md-12>
+        <div ng-repeat="rating in ratings">
+        
+            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>
+        </div>
+       
+    </div>
+    <div class="col-md-12 clear">
+      <div class="btn-toolbar" role="toolbar">
+       
+       
+    </div>
+  </div>
+</div>
     <div style="clear:both"></div>
     <div id="content">
       <div id="profile" class="section">
@@ -24,10 +40,10 @@
           <table id="bioinfo" cellspacing="0" class="no-spacing">
             <tbody>
               <tr>
-                Name: Saitama
+                Name: Saitama <br>
               </tr>
               <tr>
-                Major: Computer Science
+                Major: Computer Science<br>
               </tr>
               Email: saitama@uncc.edu
               </tr>

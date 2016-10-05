@@ -57,7 +57,21 @@
                 {{ errors.password }}
               </p>
             </div>
+              <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                                'has-error': form.name.$invalid && submitted }">
+              <label>Subject</label>
 
+              <input type="text" name="name" class="form-control" ng-model="user.subject"
+                     required
+                     mongoose-error
+                     autofocus/>
+              <p class="help-block" ng-show="form.name.$error.required && submitted">
+                A subject
+              </p>
+              <p class="help-block" ng-show="form.name.$error.mongoose">
+                {{ errors.subject }}
+              </p>
+            </div>
            <input type="submit"  class="btn btn-lg btn-default"> 
           
       

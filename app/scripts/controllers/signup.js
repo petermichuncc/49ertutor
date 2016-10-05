@@ -13,6 +13,7 @@ angular.module('chatApp')
           name: $scope.user.name,
           email: $scope.user.email,
           password: $scope.user.password,
+          subject:$scope.user.subject
           
         })
         .then( function() {
