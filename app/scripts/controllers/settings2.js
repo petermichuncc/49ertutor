@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chatApp')
-  .controller('ProfileCtrl', function ($scope, User, Auth) {
+  .controller('Settings2Ctrl', function ($scope, User, Auth) {
     $scope.errors = {};
 
     $scope.changePassword = function(form) {
@@ -17,5 +17,5 @@ angular.module('chatApp')
           $scope.errors.other = 'Incorrect password';
         });
       }
-    };
+		};
   });

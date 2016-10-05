@@ -26,6 +26,11 @@ angular.module('chatApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+       .when('/settings2', {
+        templateUrl: 'partials/settings2',
+        controller: 'Settings2Ctrl',
+        authenticate: true
+      })
        .when('/profile', {
         templateUrl: 'partials/profile',
         controller: 'ProfileCtrl'
