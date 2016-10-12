@@ -10,5 +10,6 @@
 
 angular.module('chatApp')
   .controller('HomeCtrl', function ($scope) {
-    $scope.names = ["Emil", "Tobias", "Linus"];
+  $scope.options = ['var1', 'var2', 'var3'];
+   
   });

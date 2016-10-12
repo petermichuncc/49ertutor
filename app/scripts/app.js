@@ -38,7 +38,7 @@ var chatApp =angular.module('chatApp', [
        
       })
        .when('/home', {
-        templateUrl: 'partials/homepage',
+        templateUrl: 'partials/home',
         controller: 'HomeCtrl'
        
       })
