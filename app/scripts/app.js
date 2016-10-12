@@ -36,6 +36,11 @@ var chatApp =angular.module('chatApp', [
         controller: 'ProfileCtrl'
        
       })
+       .when('/home', {
+        templateUrl: 'partials/homepage',
+        controller: 'HomeCtrl'
+       
+      })
       .otherwise({
         redirectTo: '/'
       });

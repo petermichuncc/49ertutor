@@ -2,6 +2,10 @@
   "name": "chat",
   "version": "0.0.0",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.1",
     "connect-mongo": "~0.4.0",
     "ejs": "~0.8.4",
     "express": "~3.4.3",
@@ -45,6 +49,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-svgmin": "~0.2.0",
     "grunt-usemin": "~2.0.0",
+    "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "jpegtran-bin": "0.2.0",
     "jshint-stylish": "~0.1.3",
@@ -67,6 +72,25 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+    "test": "grunt test",
+    "start": "node server.js"
+  },
+  "description": "49er tutor APP",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/petermichuncc/49ertutor.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Team Mean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petermichuncc/49ertutor/issues"
+  },
+  "homepage": "https://github.com/petermichuncc/49ertutor#readme"
 }

@@ -1,0 +1,52 @@
+<section class="chat-app">
+  <div ng-include="'partials/navbar'" class="center"></div>
+  <div class="main">
+  <script>
+
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
+</script>
+  <!--  <md-button class="btn1" ng-click="acceptOffer();"> Accept </md-button>-->
+    <div class="center"><img src="../../images/49ertutorlogo.jpg" height="150" width="200"> </div>
+ 
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+    <div class="input-field col s12">
+
+     <!-- <select ng-model="selectedItem">
+        <option ng-repeat="item in items" value="{{item}}">{{item}}</option>
+      </select>-->
+
+    
+ 
+    
+        <select ng-model="mySelectValue">
+          <option value="" disabled selected>Select UNCC colleges</option>
+         <option value="business">  Belk College of Business</option>
+          <option value="art"> College of Arts + Architecture</option>
+          <option value="computer"> College of Computing and Informatics</option>
+          <option value="education"> College of Education</option>
+           <option value="health">College of Health and Human Services</option>
+           <option value="liberal">College of Liberal Arts &amp; Sciences</option>
+          <option value="engineering"> William States Lee College of Engineering</option>
+          
+        </select>
+    <!--    <label>UNCC colleges</label>-->
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div> <!--End of main div   -->
+
+</section>
