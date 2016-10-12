@@ -11,8 +11,8 @@
         <div class="col-sm-12">
         <div id="mainwrap">
             <header>
-      <h1><a href="/">Saitama</a></h1>
-      <h2>B-Class SuperHero</h2>
+      
+      <h2>Profile</h2>
       <ul id="menu">
         <li><span>Rating</span></li>
        
@@ -38,7 +38,10 @@
           <table id="bioinfo" cellspacing="0" class="no-spacing">
             <tbody>
               <tr>
-                Name: Saitama <br>
+              <span ng-repeat="visitor in getVisitors()">
+         <!-- <img class="author-profile" ng-src="{{ visitor.profileImg }}">-->
+          <div class="name" ng-class="{'me':currentUser.name == visitor.name}">Name: {{ visitor.name }}</div>
+        </span></a></h1> <br>
               </tr>
               <tr>
                 Major: Computer Science<br>

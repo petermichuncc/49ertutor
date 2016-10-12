@@ -5,7 +5,8 @@ var chatApp =angular.module('chatApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'btford.socket-io'
+  'btford.socket-io',
+  'ngMaterial'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider

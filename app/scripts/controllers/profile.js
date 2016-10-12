@@ -1,21 +1,17 @@
 'use strict';
 
+
 angular.module('chatApp')
-  .controller('ProfileCtrl', function ($scope, User, Auth) {
-    $scope.errors = {};
+  .controller('ProfileCtrl', function ($scope, chatroom) {
+    $scope.getMessages = chatroom.getMessages;
+    $scope.getVisitors = chatroom.getVisitors;
 
-    $scope.changePassword = function(form) {
-      $scope.submitted = true;
-
-      if(form.$valid) {
-        Auth.changePassword( $scope.user.oldPassword, $scope.user.newPassword )
-        .then( function() {
-          $scope.message = 'Password successfully changed.';
-        })
-        .catch( function() {
-          form.password.$setValidity('mongoose', false);
-          $scope.errors.other = 'Incorrect password';
-        });
+    $scope.sendMessage = function () {
+      if(!$scope.newMessage) {
+        return;
       }
+
+      chatroom.sendMessage($scope.newMessage);
+      $scope.newMessage = '';
     };
   });

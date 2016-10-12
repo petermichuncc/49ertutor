@@ -10,3 +10,7 @@ angularBuilder(gulp, {
   jsMain: 'app/scripts/app.js',
   cssMain: 'styles/main.scss'
 });
+
+angular.module('material.components.slider', [
+  'material.core'
+]);

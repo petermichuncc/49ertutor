@@ -16,7 +16,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="styles/main.scss">
      <link rel="stylesheet" href="styles/main.css">
           <link rel="stylesheet" href="styles/materialize.css">
@@ -69,6 +69,8 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      
+  
         <script src="scripts/app.js"></script>
         <script src="scripts/materialize.js"></script>
         <script src="scripts/controllers/main.js"></script>
@@ -78,7 +80,7 @@
         <script src="scripts/controllers/settings.js"></script>
         <script src="scripts/controllers/settings2.js"></script>
         <script src="scripts/controllers/profile.js"></script>
-       
+
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/services/auth.js"></script>
         <script src="scripts/services/session.js"></script>
@@ -89,5 +91,13 @@
         <script src="scripts/services/chatroom.js"></script>
         <script src="scripts/directives/historyBack.js"></script>
         <!-- endbuild -->
+           <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 </body>
 </html>
