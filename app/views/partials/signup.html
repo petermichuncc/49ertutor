@@ -61,17 +61,17 @@
             </div>
               <div class="form-group input-field  s6 " ng-class="{ 'has-success': form.name.$valid && submitted,
                                                 'has-error': form.name.$invalid && submitted }">
-              <label>Subject</label>
+              <label>Profile image url</label>
 
-              <input type="text" name="name" class="form-control" ng-model="user.subject"
+              <input type="text" name="name" class="form-control" ng-model="user.profileImg"
                      required
                      mongoose-error
                      autofocus/>
               <p class="help-block" ng-show="form.name.$error.required && submitted">
-                A subject
+                A profile image is required
               </p>
               <p class="help-block" ng-show="form.name.$error.mongoose">
-                {{ errors.subject }}
+                {{ errors.profileimage }}
               </p>
             </div>
        

@@ -14,7 +14,8 @@ angular.module('chatApp')
           email: $scope.user.email,
           password: $scope.user.password,
         major:$scope.user.major,
-           biography:$scope.user.biography
+           biography:$scope.user.biography,
+           profileImg:$scope.user.profileImg
           
         })
         .then( function() {
