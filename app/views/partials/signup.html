@@ -9,35 +9,29 @@
  <div class="row">
     <form >
 
-        <div class="input-field s6 form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+        <div class="form-group input-field  s6" ng-class="{ 'has-success': form.name.$valid && submitted,
                                                 'has-error': form.name.$invalid && submitted }">
-          
-          <input id="icon_prefix" type="text" name="name" class="form-control" ng-model="user.name"
+              <label>Name</label>
+
+              <input type="text" name="name" class="  form-control" ng-model="user.name"
                      required
                      mongoose-error
-                     autofocus class="validate">
-          <label for="icon_prefix">Name</label>
-            <p class="help-block" ng-show="form.name.$error.required && submitted">
+                     autofocus/>
+              <p class="help-block" ng-show="form.name.$error.required && submitted">
                 A name is required
               </p>
               <p class="help-block" ng-show="form.name.$error.mongoose">
                 {{ errors.name }}
               </p>
-        </div>
-        
-     
-    </form>
-  </div>
-      
+            </div>
 
-      <div class="input-field s6 form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
+            <div class="form-group input-field  s6 " ng-class="{ 'has-success': form.email.$valid && submitted,
                                                 'has-error': form.email.$invalid && submitted }">
-          
+              <label>Email</label>
 
-              <input type="email" name="email" class="form-control" ng-model="user.email"
+              <input type="email" name="email" class="input-field  s6 form-control" ng-model="user.email"
                      required
                      mongoose-error/>
-                      <label for="icon_prefix">Email</label>
               <p class="help-block" ng-show="form.email.$error.email && submitted">
                 Doesn't look like a valid email.
               </p>
@@ -49,15 +43,14 @@
               </p>
             </div>
 
-            <div class=" input-field  s6 form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
+            <div class="form-group input-field  s6 " ng-class="{ 'has-success': form.password.$valid && submitted,
                                                 'has-error': form.password.$invalid && submitted }">
-         
+              <label>Password</label>
 
-              <input type="password" name="password" class="form-control" ng-model="user.password"
+              <input type="password" name="password" class="input-field  s6 form-control" ng-model="user.password"
                      ng-minlength="3"
                      required
                      mongoose-error/>
-                          <label for="icon_prefix">Password</label>
               <p class="help-block"
                  ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
                 Password must be at least 3 characters.
@@ -66,9 +59,7 @@
                 {{ errors.password }}
               </p>
             </div>
-           
-
-              <div class="input-field  s6 form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+              <div class="form-group input-field  s6 " ng-class="{ 'has-success': form.name.$valid && submitted,
                                                 'has-error': form.name.$invalid && submitted }">
               <label>Subject</label>
 
@@ -82,7 +73,36 @@
               <p class="help-block" ng-show="form.name.$error.mongoose">
                 {{ errors.subject }}
               </p>
+            </div>
+       
+           
+
+             <div class="input-field  s6 form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                                'has-error': form.name.$invalid && submitted }">
+              <label>Major</label>
+
+              <input type="text" name="name" class="form-control" ng-model="user.major"
+                     required
+                     mongoose-error
+                     autofocus/>
+              <p class="help-block" ng-show="form.name.$error.required && submitted">
+              A major is required
+              </p>
+              <p class="help-block" ng-show="form.name.$error.mongoose">
+                {{ errors.major }}
+              </p>
             </div> 
+           <div class="input-field  s6 form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                                'has-error': form.name.$invalid && submitted }">
+          <textarea id="textarea1" class="materialize-textarea" ng-model="user.biography"></textarea>
+          <label for="textarea1">Biography</label>
+          <p class="help-block" ng-show="form.name.$error.required && submitted">
+              A biography is required
+              </p>
+              <p class="help-block" ng-show="form.name.$error.mongoose">
+                {{ errors.biography }}
+              </p>
+        </div>
            <input type="submit"  class="btn btn-lg btn-default"> 
           
       

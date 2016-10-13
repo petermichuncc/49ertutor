@@ -13,7 +13,8 @@ angular.module('chatApp')
           name: $scope.user.name,
           email: $scope.user.email,
           password: $scope.user.password,
-          subject:$scope.user.subject
+        major:$scope.user.major,
+           biography:$scope.user.biography
           
         })
         .then( function() {
@@ -36,4 +37,3 @@ angular.module('chatApp')
       }
     };
   });
-  
