@@ -8,7 +8,7 @@ var chatApp =angular.module('chatApp', [
   'btford.socket-io',
   'ngMaterial'
 ])
-  .config(function ($routeProvider, $locationProvider, $httpProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider,$mdIconProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/main',
@@ -47,7 +47,9 @@ var chatApp =angular.module('chatApp', [
       });
       
     $locationProvider.html5Mode(true);
-
+      $mdIconProvider
+      .iconSet("call", 'img/icons/sets/communication-icons.svg', 24)
+      .iconSet("social", 'img/icons/sets/social-icons.svg', 24);
     // Intercept 401s and redirect you to login
     $httpProvider.interceptors.push(['$q', '$location', function($q, $location) {
       return {
@@ -62,7 +64,9 @@ var chatApp =angular.module('chatApp', [
         }
       };
     }]);
-  })
+
+
+  })//config ends here
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$routeChangeStart', function (event, next) {
@@ -73,6 +77,37 @@ var chatApp =angular.module('chatApp', [
     });
   });
 
+  chatApp.controller('BasicDemoCtrl', function DemoCtrl($mdDialog) {
+    var originatorEv;
+
+    this.openMenu = function($mdOpenMenu, ev) {
+      originatorEv = ev;
+      $mdOpenMenu(ev);
+    };
+
+    this.notificationsEnabled = true;
+    this.toggleNotifications = function() {
+      this.notificationsEnabled = !this.notificationsEnabled;
+    };
+
+    this.redial = function() {
+      $mdDialog.show(
+        $mdDialog.alert()
+          .targetEvent(originatorEv)
+          .clickOutsideToClose(true)
+          .parent('body')
+          .title('Suddenly, a redial')
+          .textContent('You just called a friend; who told you the most amazing story. Have a cookie!')
+          .ok('That was easy')
+      );
+
+      originatorEv = null;
+    };
+
+    this.checkVoicemail = function() {
+      // This never happens.
+    };
+  });
 
 
 chatApp.controller('StarCtrl', ['$scope', function ($scope) {
