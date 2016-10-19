@@ -45,7 +45,7 @@ angular.module('chatApp')
 $scope.showDetails = function(y, ev) {
      //use y here
      var confirm = $mdDialog.confirm()
-          .title('Would you like visit profile?')
+          .title('Would you like to visit ' + y)
           .textContent('Body')
           .ariaLabel('Lucky day')
           .targetEvent(ev)
@@ -58,7 +58,7 @@ $scope.showDetails = function(y, ev) {
       $scope.status = 'You decided to not visit.';
     });
      console.log("this is the clicked text " + y)
-     alert(y);
+    
 }
     $scope.sendMessage = function () {
       if(!$scope.newMessage) {
