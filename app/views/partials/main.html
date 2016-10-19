@@ -8,7 +8,7 @@
           <li ng-repeat="message in getMessages()">
            <!-- <img class="author-profile" ng-src="{{ message.author.profileImg }}">-->
             <div class="message">
-              <div class="author" ng-class="{'me':currentUser.name == message.author.name}">{{ message.author.name }}</div>
+              <div class="author" ng-class="{'me':currentUser.name == message.author.name}" ng-click="showDetails(message.author.name)" >{{ message.author.name }}</div>
               <div class="date">{{ message.date | date: 'h:mm' }}</div>
               <div class="body">{{ message.body }}</div>
        
