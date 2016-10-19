@@ -6,7 +6,7 @@ var chatApp =angular.module('chatApp', [
   'ngSanitize',
   'ngRoute',
   'btford.socket-io',
-  'ngMaterial'
+  'ngMaterial', 'ngMessages', 'material.svgAssetsCache'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider,$mdIconProvider) {
     $routeProvider
