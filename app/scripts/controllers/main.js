@@ -46,13 +46,17 @@ $scope.showDetails = function(y, ev) {
      //use y here
      var confirm = $mdDialog.confirm()
           .title('Would you like to visit ' + y+ "'s profile")
-          .textContent('Body')
+          .textContent('')
           .ariaLabel('Lucky day')
           .targetEvent(ev)
           .ok('Sure!')
           .cancel('No');
 
     $mdDialog.show(confirm).then(function() {
+      /*
+          The user decided to visit so route to the profile page of the specific user
+          
+      */
       $scope.status = 'You decided to visit ' + y+"'s profile";
     }, function() {
       $scope.status = 'You decided to not visit.';

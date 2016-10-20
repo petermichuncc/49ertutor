@@ -6,12 +6,12 @@
       <section auto-scroll="event:scroll">
         <ul>
           <li ng-repeat="message in getMessages()">
-           <!-- <img class="author-profile" ng-src="{{ message.author.profileImg }}">-->
+           <div class="date">{{ message.date | date: 'h:mm' }} </div>
+           <img height="42" width="42" class="author-profile" ng-src="{{ message.author.profileImg }}">
             <div class="message">
-              <div class="author" ng-class="{'me':currentUser.name == message.author.name}" ng-click="showDetails(message.author.name, $event)" >{{ message.author.name }}</div>
-              <div class="date">{{ message.date | date: 'h:mm' }}</div>
-              <div class="body">{{ message.body }}</div>
-       
+              <div class="author" ng-class="{'me':currentUser.name == message.author.name}" ng-click="showDetails(message.author.name, $event)" >{{ message.author.name }} {{ message.body }}</div>
+             
+             
             </div>
           </li>
         </ul>
@@ -31,7 +31,7 @@
     <aside>
       <ul>
         <li ng-repeat="visitor in getVisitors()">
-         <!-- <img class="author-profile" ng-src="{{ visitor.profileImg }}">-->
+          <img height="42" width="42" class="author-profile" ng-src="{{ visitor.profileImg }}">
           <div class="name" ng-class="{'me':currentUser.name == visitor.name}">{{ visitor.name }}</div>
         </li>
       </ul>
