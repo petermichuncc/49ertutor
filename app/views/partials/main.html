@@ -7,9 +7,9 @@
         <ul>
           <li ng-repeat="message in getMessages()">
            <div class="date">{{ message.date | date: 'h:mm' }} </div>
-           <img height="42" width="42" class="author-profile" ng-src="{{ message.author.profileImg }}">
+           <img ng-click="showDetails(message.author.name, $event)" height="42" width="42" class="author-profile" ng-src="{{ message.author.profileImg }}">{{ message.author.name }} {{ message.body }}
             <div class="message">
-              <div class="author" ng-class="{'me':currentUser.name == message.author.name}" ng-click="showDetails(message.author.name, $event)" >{{ message.author.name }} {{ message.body }}</div>
+              <div class="author" ng-class="{'me':currentUser.name == message.author.name}"  > </div>
              
              
             </div>
