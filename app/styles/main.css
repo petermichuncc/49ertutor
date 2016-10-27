@@ -4,7 +4,12 @@
     margin: auto;
     text-align:center;
 }
+#parent {display: table;}
 
+#child {
+    display: table-cell;
+    vertical-align: middle;
+}
 select {
 display: block;
 margin: 0 auto;
