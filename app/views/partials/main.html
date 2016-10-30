@@ -4,11 +4,12 @@
     <div class="chat">
     <!-- Figure out what to do next here -->
     <!-- test out menu or different angular material menu buttons-->
+    <!--Add messages page-->
       <section auto-scroll="event:scroll">
         <ul>
           <li ng-repeat="message in getMessages()" id="parent" >
          <!--  <div class="date ">{{ message.date | date: 'h:mm' }} </div>-->
-           <img ng-click="showDetails(message.author.name, $event)" height="42" width="42"  class="author-profile child" ng-src="{{ message.author.profileImg }}"><div id="child">{{ message.author.name }} {{ message.body }}</div>
+           <img ng-click="showDetails(message.author.name, $event)" height="42" width="42"  class="author-profile child" ng-src="{{ message.author.profileImg }}"><div id="child">  &nbsp;{{ message.author.name }}:&nbsp; {{ message.body }}</div>
             <div class="message">
               <div class="author" ng-class="{'me':currentUser.name == message.author.name}"  > </div>
              
