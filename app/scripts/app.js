@@ -44,7 +44,7 @@ var chatApp =angular.module('chatApp', [
       })
        .when('/speeddial', {
         templateUrl: 'partials/speeddial',
-        controller: 'DemoCtrl'
+        controller: 'AppCtrl'
        
       })
       .otherwise({
