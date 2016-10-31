@@ -42,6 +42,11 @@ var chatApp =angular.module('chatApp', [
         controller: 'HomeCtrl'
        
       })
+       .when('/speeddial', {
+        templateUrl: 'partials/speeddial',
+        controller: 'DemoCtrl'
+       
+      })
       .otherwise({
         redirectTo: '/'
       });
