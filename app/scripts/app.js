@@ -47,6 +47,12 @@ var chatApp =angular.module('chatApp', [
         controller: 'AppCtrl'
        
       })
+       .when('/fabtoolbar', {
+        templateUrl: 'partials/fabtoolbar',
+        controller: 'toolbarController'
+       
+       
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -191,7 +191,22 @@ module.exports = function (grunt) {
         }
       }
     },
-
+sass: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'styles/main.css': 'styles/main.scss'
+            }
+        }
+    },
+    watch: {
+  sass: {
+   files: 'style/{,*/}*.{scss,sass}',
+   tasks: ['sass:dev']
+  }
+ },
     // Renames files for browser caching purposes
     rev: {
       dist: {
@@ -429,7 +444,9 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
-
+// Default task(s).
+  grunt.registerTask('default', ['lint', 'sass:dev', 'concurrent:default']);
+grunt.registerTask('default', ['sass']);
   grunt.registerTask('heroku', function () {
     grunt.log.warn('The `heroku` task has been deprecated. Use `grunt build` to build for deployment.');
     grunt.task.run(['build']);
