@@ -49,7 +49,13 @@ var chatApp =angular.module('chatApp', [
       })
        .when('/fabtoolbar', {
         templateUrl: 'partials/fabtoolbar',
-        controller: 'toolbarController'
+        controller: 'AppCtrl'
+       
+       
+      })
+       .when('/dialog', {
+        templateUrl: 'partials/dialog',
+        controller: 'DemoCtrl'
        
        
       })

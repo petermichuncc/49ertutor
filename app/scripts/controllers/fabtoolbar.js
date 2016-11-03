@@ -1,7 +1,8 @@
-chatApp.controller('toolbarController', toolbarController);
+chatApp.controller('AppCtrl', function($scope) {
+      $scope.isOpen = false;
 
-         function toolbarController ($scope) {
-            $scope.isOpen = false;
-            $scope.count = 0;
-			$scope.selectedDirection = 'left';          
-         }    
+      $scope.demo = {
+        isOpen: false,
+        count: 0,
+        selectedDirection: 'left'
+      };
