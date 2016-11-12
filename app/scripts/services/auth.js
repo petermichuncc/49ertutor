@@ -1,5 +1,5 @@
 'use strict';
-
+/* add code for updated a user */
 angular.module('chatApp')
   .factory('Auth', function Auth($location, $rootScope, Session, User, $cookieStore) {
     // Get currentUser from cookie
